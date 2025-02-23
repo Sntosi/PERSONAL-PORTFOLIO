@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
-import './App.css';
+import '../App.css'; // Updated path
 
 const Header = () => {
   const [isVisible, setIsVisible] = useState(true);

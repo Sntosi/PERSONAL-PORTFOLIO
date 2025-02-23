@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './App.css';
+import '../App.css'; // Updated path
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
