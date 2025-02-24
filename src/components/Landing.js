@@ -7,7 +7,7 @@ const Landing = () => {
     <section id="landing" className="landing">
       <div className="landing-content">
         <img src={avatar} alt="Avatar" className="avatar" />
-        <h1>Hello, I am Pete!</h1>
+        <h1>Hello, I am santoshi !!!</h1>
         <p className="bio">A frontend developer specialised in React.</p>
       </div>
     </section>
