@@ -1,9 +1,4 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
+/* Header Styles */
 .header {
   display: flex;
   justify-content: space-between;
@@ -15,79 +10,228 @@ body {
   top: 0;
   width: 100%;
   transition: top 0.3s;
+  z-index: 1000;
 }
 
 .header.hidden {
   top: -60px;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-}
-
 .social-links {
   display: flex;
   gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .social-links a {
   color: white;
   font-size: 1.5rem;
+  text-decoration: none;
 }
 
-.landing, .projects, .contact {
-  padding: 2rem;
+.internal-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.internal-links button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.internal-links button:hover {
+  text-decoration: underline;
+}
+
+/* Landing Section Styles */
+.landing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  background-color: #0077b6; /* Blue background */
+  color: white;
   text-align: center;
+  padding: 2rem;
+}
+
+.landing-content {
+  max-width: 600px;
 }
 
 .avatar {
   width: 150px;
   height: 150px;
-  border-radius: 50%;
+  border-radius: 50%; /* Rounded avatar */
+  margin-bottom: 1.5rem;
+}
+
+.landing h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.bio {
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+/* Projects Section Styles */
+.projects {
+  background-color: #2a9d8f; /* Green background */
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.projects h2 {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 2rem;
 }
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
 }
 
 .project-card {
-  border: 1px solid #ccc;
-  padding: 1rem;
-  border-radius: 5px;
+  background-color: white;
+  border-radius: 10px; /* Rounded edges */
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
-form {
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.project-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.project-content p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.project-content a {
   display: flex;
-  flex-direction: column;
-  max-width: 400px;
+  align-items: center;
+  color: #2a9d8f;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-content a:hover {
+  text-decoration: underline;
+}
+
+.project-content a svg {
+  margin-left: 0.5rem;
+}
+
+/* Contact Section Styles */
+.contact {
+  padding: 4rem 2rem;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.contact form {
+  max-width: 600px;
   margin: 0 auto;
+  text-align: left;
 }
 
-form label {
+.contact label {
+  display: block;
   margin-top: 1rem;
+  font-weight: bold;
 }
 
-form input, form textarea, form button {
-  padding: 0.5rem;
+.contact input,
+.contact select,
+.contact textarea {
+  width: 100%;
+  padding: 0.75rem;
   margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
 }
 
-form button {
-  background-color: #333;
+.contact textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.contact button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 1.5rem;
+  background-color: #2a9d8f;
   color: white;
   border: none;
+  border-radius: 5px;
+  font-size: 1rem;
   cursor: pointer;
 }
 
-form button:hover {
-  background-color: #555;
+.contact button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.contact .error {
+  border-color: red;
+}
+
+.contact .error-message {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.contact .alert {
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 5px;
+}
+
+.contact .alert.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.contact .alert.error {
+  background-color: #f8d7da;
+  color: #721c24;
 }

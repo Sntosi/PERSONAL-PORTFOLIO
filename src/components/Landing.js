@@ -1,13 +1,15 @@
 import React from 'react';
 import avatar from './avatar.jpg'; // Ensure this file exists
-import '../App.css'; // Updated path
+import '../App.css';
 
 const Landing = () => {
   return (
     <section id="landing" className="landing">
-      <img src={avatar} alt="Avatar" className="avatar" />
-      <h1>LION</h1>
-      <p>I am the king of the jungle.</p>
+      <div className="landing-content">
+        <img src={avatar} alt="Avatar" className="avatar" />
+        <h1>Hello, I am Pete!</h1>
+        <p className="bio">A frontend developer specialised in React.</p>
+      </div>
     </section>
   );
 };
