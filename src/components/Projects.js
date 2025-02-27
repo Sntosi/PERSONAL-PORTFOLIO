@@ -3,8 +3,8 @@ import { FaArrowRight } from 'react-icons/fa';
 import '../App.css';
 
 const projects = [
-  { id: 1, title: 'Project 1', description: 'Description of Project 1', image: 'project1.jpg', link: '#' },
-  { id: 2, title: 'Project 2', description: 'Description of Project 2', image: 'project2.jpg', link: '#' },
+  { id: 1, title: 'ChatApp', description: 'This project is a realtime chat application developed using Spring Boot and WebSocket. The application allows users to join, chat, and leave chat rooms in real-time.', image: 'project1.jpg', link: 'git@github.com:Sntosi/ChatApp.git' },
+  { id: 2, title: 'Pygame-space-shooter', description: 'A Pygame Space Shooter is a simple 2D shooting game built using Pygame, a Python library for game development. In this game, the player controls a spaceship that moves left and right while shooting bullets to destroy incoming enemies (like asteroids or alien ships).', image: 'project2.jpg', link: '#' },
   { id: 3, title: 'Project 3', description: 'Description of Project 3', image: 'project3.jpg', link: '#' },
   { id: 4, title: 'Project 4', description: 'Description of Project 4', image: 'project4.jpg', link: '#' },
 ];
